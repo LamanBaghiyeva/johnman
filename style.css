@@ -2,6 +2,7 @@
 
 body{
     overflow-x: hidden;
+    transition: all 0.3s;
 }
 .nav{
     padding: 27px 90px 0 0;
@@ -39,7 +40,6 @@ ul li:nth-child(1) a:hover{
 
 .menu{
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
 
@@ -54,15 +54,15 @@ ul li:nth-child(1) a:hover{
 .link{
     display: flex;
     flex-direction: column;
-    display: none;
-    padding: 20px;
-   
-    
+    height: 0;
+    overflow: hidden;
+    transition: height 1.4s ease;
     
 }
 
 .aktiv{
-   display: flex;
+   height:400px;
+   width: 100%;
 }
 
 @media(max-width:984px){
@@ -85,6 +85,10 @@ ul li:nth-child(1) a:hover{
 
 .left-side p{
     width: 497px;
+}
+.left-side button a{
+    color: #fff;
+    text-decoration: none;
 }
 img{
     width: 271px;
@@ -201,7 +205,7 @@ font-weight: 500;
 font-size: 20px;
 line-height: 29px;
 
-color: #FFFFFF;
+color: #FFF;
 background: #FF6464;
 border: none;
 padding: 9px 21px 9px 20px;
@@ -391,4 +395,52 @@ footer img{
     .works{
         padding-left: 0;
     }
+}
+
+.inf{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.view{
+    padding-right: 140px;
+    font-family: 'Heebo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: right;
+
+/* Secondry */
+
+color: #00A8CC;
+
+}
+
+@media(max-width:1260px){
+    .view{
+        display: none;
+    }
+    .yazi{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width:875px){
+    .yazi{
+        padding-left: 0;
+    }
+}
+@media(max-width:399px){
+.section2{
+    width: 500px;
+}
+}
+
+.dark-mode{
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
 }
